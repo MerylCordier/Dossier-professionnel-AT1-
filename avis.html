@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>France voyage</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header class="header">
+    <nav>
+      <div class="header__part">
+        <div class="container">
+          <div class="header__flex">
+            <a class="logo" href="index.html">
+              <img class="logo__image" src="img/logo.jpg" alt="">
+              <span class="logo__title" href="index.html">France voyage</span>
+            </a>
+            <div class="menu">
+              <a class="menu__item" href=""><i class="icon-heart"></i> Favoris</a>
+              <a id="newsletter-link" class="menu__item" href=""><i class="icon-mail"></i> Newsletter</a>
+              <a class="menu__item" href="avis.html"><i class="icon-check-circle"></i> Avis</a>
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__part">
+        <div class="container">
+          <nav class="submenu">
+            <a class="submenu__item submenu__item--current" href="index.html">Voyages</a>
+            <a class="submenu__item" href="">Restaurants</a>
+            <a class="submenu__item" href="">Hôtels</a>
+            <a class="submenu__item" href="">Vols</a>
+            <a class="submenu__item" href="">Croisières</a>
+          </nav>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="content">
+      <h1 class="content__title">Partir en France</h1>
+
+      <section class="slider">
+        <button class="btn slider__btn" id="previous_btn" type="button" aria-label="Précédent">&lt;</button>
+        <div class="slider__nav--item">
+            <img class="slider__img"src="img/Paris.jpg" alt="Paris">
+            <img class="slider__img"src="img/Nice.jpg" alt="Nice">
+            <img class="slider__img"src="img/Marseille.jpg" alt="Marseille">
+            <img class="slider__img"src="img/Strasbourg.jpg" alt="Strasbourg">
+            <img class="slider__img"src="img/Lille.jpg" alt="Lille">
+            <img class="slider__img"src="img/Perros-Guirec.jpg" alt="Perros-Guirec">
+          </div>
+          <button class="btn slider__btn" id="next_btn" type="button" aria-label="Suivant">&gt;</button>
+      </section>
+      <section class="segment">
+        <h2 class="segment__title">Derniers commentaires</h2>
+        <div class="filters">
+          <span class="filter">
+            <input type="checkbox" name="rating" value="3" id="rating-3" checked>
+            <label for="rating-3">3 étoiles</label>
+          </span>
+          <span class="filter">
+            <input type="checkbox" name="rating" value="2" id="rating-2" checked>
+            <label for="rating-2">2 étoiles</label>
+          </span>
+          <span class="filter">
+            <input type="checkbox" name="rating" value="1" id="rating-1" checked>
+            <label for="rating-1">1 étoile</label>
+          </span>
+        </div>
+        <article class="review" data-rating="3">
+          <h3 class="review__title">Térébenthine</h3>
+          <div class="review__stars">
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae esse provident velit perspiciatis nemo rem assumenda dolores quam maiores corporis?</p>
+        </article>
+        <article class="review" data-rating="2">
+          <h3 class="review__title">Périclès</h3>
+          <div class="review__stars">
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+          </div>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi a iusto molestias voluptatum expedita exercitationem id modi, neque similique ipsum, quam sit minima quo reiciendis! Ipsum temporibus adipisci praesentium quae!</p>
+        </article>
+        <article class="review" data-rating="1">
+          <h3 class="review__title">Zoël</h3>
+          <div class="review__stars">
+            <i class="icon-star"></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti at ex pariatur maxime inventore non, quae facere, doloremque provident ratione iure adipisci sequi doloribus repellat natus repellendus quo quam libero.</p>
+        </article>
+        <article class="review" data-rating="3">
+          <h3 class="review__title">Walbert</h3>
+          <div class="review__stars">
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, doloremque.</p>
+        </article>
+        <article class="review" data-rating="3">
+          <h3 class="review__title">Glannon</h3>
+          <div class="review__stars">
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+          </div>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est quos quas repellat? Odio quam ea repellat at recusandae illo quibusdam, reprehenderit similique cumque earum nam, aperiam quo qui culpa autem quaerat assumenda sapiente, maxime praesentium. Aut iusto at hic quaerat.</p>
+        </article>
+        <article class="review" data-rating="1">
+          <h3 class="review__title">Pétunia</h3>
+          <div class="review__stars">
+            <i class="icon-star"></i>
+          </div>
+          <p>Lorem ipsum dolor sit.</p>
+        </article>
+        <article class="review" data-rating="3">
+          <h3 class="review__title">Lotus</h3>
+          <div class="review__stars">
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum et sit fuga laboriosam accusantium consequuntur est reprehenderit a sunt vero voluptates tempora cum delectus unde eveniet possimus veniam dignissimos, officiis autem dicta corrupti. Quasi fugit nobis sint voluptatum praesentium nihil, aliquid voluptatibus veritatis, illum qui aut obcaecati beatae earum quibusdam.</p>
+        </article>
+        <article class="review" data-rating="3">
+          <h3 class="review__title">Caméo</h3>
+          <div class="review__stars">
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dolorem dolores veniam!</p>
+        </article>
+      </section>
+
+    </div>
+  </main>
+
+    <aside class="newsletter newsletter--hidden">
+      <button class="newsletter__close btn" aria-label="Fermer" type="button">&Cross;</button>
+      <h2 class="newsletter__title">Inscription à la newsletter</h2>
+      <form id="newsletter-form">
+        <input id="subscriber-email" class="newsletter__field" type="email" required placeholder="user@email.com" aria-label="Votre email">
+        <button class="btn" type="submit">Valider</button>
+
+        <div id="email-result" class="email-result"></div>
+      </form>
+    </aside>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Toute ressemblance avec d'autres contenus est purement fortuite.</p>
+    </div>
+  </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
