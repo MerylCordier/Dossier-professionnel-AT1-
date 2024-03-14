@@ -98,50 +98,43 @@ formElement.addEventListener("submit", (event) => { // Ecouter le submit sur le 
 // === ETAPE 3 === faire fonctionner le slider
 
 const btnPrevious = document.querySelector("#previous_btn");
-
 const btnNext = document.querySelector("#next_btn");
-
 const img = document.querySelectorAll(".slider__img");
-
 let imgIndex = 0;
-const currentImg = img[imgIndex];
-// currentImg.classList.add("slider__img--current");
-
 
 btnNext.addEventListener("click", () => {
-  
-  if (imgIndex < img.length-1 &&  !0) {
-    
-    const currentImg = img[imgIndex];
-    currentImg.classList.add("slider__img--current");
-    imgIndex++;
-    
-    console.log(currentImg);
-       
-  } 
+  // Supprimer la classe 'slider__img--current' de l'image actuelle
+  img[imgIndex].classList.remove("slider__img--current");
+
+  // Incrémenter l'index de l'image
+  imgIndex++;
+
+  // Vérifier si l'index dépasse le nombre total d'images
+  if (imgIndex >= img.length) {
+    imgIndex = 0; // Réinitialiser l'index à zéro pour créer une boucle
+  }
+
+  // Ajouter la classe 'slider__img--current' à la nouvelle image
+  img[imgIndex].classList.add("slider__img--current");
 });
 
-
 btnPrevious.addEventListener("click", () => {
-    
-  if (imgIndex == 0) {   
-    currentImg.classList.remove("slider__img--current"); 
-    console.log(currentImg);
+  // Supprimer la classe 'slider__img--current' de l'image actuelle
+  img[imgIndex].classList.remove("slider__img--current");
 
-    imgIndex = img.length-1 ;
-    console.log(imgIndex);
-   
-  } else { 
-    imgIndex --;    
-    console.log(imgIndex);
-    const currentImg = img[imgIndex];   
-    console.log(currentImg);
-    currentImg.classList.add("slider__img--current");
-       
-  }  
+  // Décrémenter l'index de l'image
+  imgIndex--;
 
-});    
+  // Vérifier si l'index est inférieur à zéro
+  if (imgIndex < 0) {
+    imgIndex = img.length - 1; // Réinitialiser l'index à la dernière image
+  }
 
+  // Ajouter la classe 'slider__img--current' à la nouvelle image
+  img[imgIndex].classList.add("slider__img--current");
+});
+ 
+// === ETAPE 4 === Filtrer les commentaires en fonction des notes
 function setupRatings() {
   // Selectionner TOUTES les checkbox COCHEES (seulement celle-ci)
   // Pour chaque COMMENTAIRE, si la note du commentaire ne fait partie des checkbox cochées => on le masque
@@ -187,46 +180,6 @@ function setupRatings() {
 }
 setupRatings();
   
-// function setupThemes() {
-//   const switchButton = document.getElementById("theme-switch"); // On selectionne le bouton "choix du theme"
-//   switchButton.addEventListener("click", () => { // On écoute le click, et en cas de click :
-//     document.body.classList.toggle("theme-dark"); // On selectionne le body // On toggle la classe `theme-dark` sur le body
-//   });
-    
-//   setupTheme("theme-red");
-//   setupTheme("theme-blue");
-//   setupTheme("theme-green");
-    
-//   function setupTheme(theme) {
-//     document.getElementById(theme).addEventListener("click", () => {
-//       document.querySelector("#logo-img").setAttribute("src", `img/logo-${theme}.png`);
-      
-//       const isDarkThemeActive = document.body.classList.contains("theme-dark"); // On regarde si il y a la classe theme dark
-        
-//       document.body.className = theme; // On réécrase toutes les classes
-//       if (isDarkThemeActive) {
-//         document.body.classList.add("theme-dark");
-//       }
-//     });
-//   }  
-// }
-
-// === ETAPE 4 === Ajout dans la page des favoris
-
-// const btnFavorites = document.querySelectorAll(".btn__like");
-// const cards = document.querySelectorAll("div.card__content");
-
-// btnFavorites.forEach(btn => {
-//   btn.addEventListener("click", () => {
-//     cards.forEach((card) => {
-//       const cardContent = document.querySelector(".card__content");
-    
-    
-//       console.log(cardContent);  
-      
-//     });
-//     console.log("go");
-//   });});
 
 
 
